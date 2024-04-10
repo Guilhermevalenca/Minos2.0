@@ -1,4 +1,5 @@
 import { Server } from "socket.io";
+import socketRoom from "./socketRoom";
 
 const io = new Server(3000, {
     cors: {
@@ -7,5 +8,6 @@ const io = new Server(3000, {
 });
 
 io.on("connection", (socket) => {
-    console.log(socket.id);
+    // console.log(socket.id);
+    socketRoom(io, socket);
 });

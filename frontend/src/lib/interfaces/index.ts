@@ -7,7 +7,14 @@ interface IStartingPosition {
     top: number,
     left: number
 }
+interface IRoomSocket {
+    success: boolean,
+    error: string | undefined,
+    room: string | undefined
+}
+
 export type {
     IPlayer,
-    IStartingPosition
+    IStartingPosition,
+    IRoomSocket
 }

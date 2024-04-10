@@ -6,7 +6,7 @@
     <nav>
         <ul>
             <a href="/">home</a>
-            <a href="/game">jogar</a>
+            <a href="/room">jogar</a>
         </ul>
     </nav>
 </header>
