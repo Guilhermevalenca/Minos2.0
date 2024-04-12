@@ -1,9 +1,14 @@
-.chao {
+.chao, .parede {
   width: 30px;
   height: 30px;
-  background-color: aquamarine;
   padding: 0;
   margin: 0;
+}
+.chao {
+  background-color: aquamarine;
+}
+.parede {
+  background-color: black;
 }
 .human, .monster {
   width: 20px;
