@@ -16,7 +16,7 @@
     })
 
     function handleKeydown({key}: {key: string}): void {
-        let currentPosition: IPlayer= {
+        let currentPosition: IPlayer = {
             ...player1
         };
         if(key && !!player1) {
@@ -123,7 +123,7 @@
         socket.emit('started_game', $room);
     }
     $: {
-        if(!!player1 && !!player2) {
+        if(!!player1 && !!player2 && player1.type !== player2.type) {
             if(player1.x === player2.x && player1.y === player2.y) {
                 socket.emit('end_game_by_collision', $room);
             }
@@ -137,8 +137,8 @@
         })
             .finally(() => {
                 quitGame();
-            })
-    })
+            });
+    });
 </script>
 <svelte:window on:keydown={handleKeydown} />
 <button on:click={quitGame}>Sair do jogo</button>

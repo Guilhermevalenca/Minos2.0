@@ -8,7 +8,6 @@
     let newRoom: string = '';
     function submit(event: SubmitEvent) {
         event.preventDefault();
-        console.log(newRoom);
         socket.emit('join_room', newRoom);
     }
     socket.on('join_room', (data: IRoomSocket) => {
@@ -26,5 +25,5 @@
 
 <form on:submit={submit}>
     <input type="text" on:input={event => {newRoom = event.target.value}} />
-    <button type="submit">lest go</button>
+    <button type="submit">let's go</button>
 </form>
